@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* coloring */
+.red{
+  color: red;
+}
+.hide{
+  display: none;
+}
+.app{
+  position: relative;
+}
+
+.NavBar {
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff8ed;
+  width: 100%;
+  justify-content: space-around;
+  height: 7vh;
+  align-items: center;
+}
+.List-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 10px;
+  align-items: center;
+}
+.btn-sign-in {
+  border: solid #fff8ed;
+  background-color: #ffffff00;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  transition: .3s;
+}
+.btn-sign-in:hover{
+  border: solid #b46e13;
+}
+.btn-sign-up {
+  background-color: #b46e13;
+  border: none;
+  padding: 7px;
+  color: #fff8ed;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-sign-up:hover {
+  background-color: #371f01;
+}
+.List-tst-btns {
+  color: #371f01;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  width: 50%;
+}
+ul {
+  list-style: none;
+}
+li {
+  cursor: pointer;
+}
+.Main {
+  display: flex;
+  /* background-color: #fff8ed; */
+  width: 100%;
+  height: 88vh;
+}
+
+.clip1,
+.clip2 {
+  width: 50%;
+  text-align: center;
+  align-content: center;
+}
+.clip1 h1 {
+  font-size: 60px;
+  color: #371f01;
+}
+.clip1 * {
+  margin: 1vh;
+}
+.clip1 button {
+  width: 15vh;
+  height: 4vh;
+  border-radius: 20px;
+}
+.Main-Btn-1 {
+  color: white;
+  background-color: #b46e13;
+  border: solid #b46e13;
+}
+.Main-Btn-2 {
+  background-color: #f0f8ff00;
+  border: solid #b46e13;
+  color: #b46e13;
+}
+.Main-Btn-1,
+.Main-Btn-2 {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.Main-Btn-1:hover,
+.Main-Btn-2:hover {
+  border-color: #371f01;
+}
+.Footer {
+  background-color: #fff8ed;
+  height: 5vh;
+  width: 96%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2%;
+}
+.clip2-video {
+  border: solid white 10px;
+  box-shadow: -3px 5px 15px 3px rgba(0, 0, 0, 0.185);
+  rotate:-3deg;
+  animation-name: video;
+  transition: .3s;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+.clip2-video:hover{
+  animation-play-state: running;
+}
+
+@keyframes video{
+
+  0%{
+    rotate:-3deg;
+  }
+  50%{
+    rotate:3deg;
+  }
+  100%{
+    rotate:-3deg;
+  }
+
+}
+
+.icon-div * {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #371f01;
+  font-size: large;
+}
+.icon-div img {
+  width: 20px;
+  height: 20px;
+}
+.icon-div {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+.footer-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.footer-icons img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.back-blob{
+  background-image: url(./assets/blob.svg);
+  bottom: 0;
+  right: 30%;
+}
+.back-blob2{
+  background-image: url(./assets/blob\ \(1\).svg);
+  top: 0;
+  left: 0;
+  translate: -150px 100px;
+  scale: 1.5;
+}
+.back-blob3{
+  background-image: url(./assets/blob\ \(2\).svg);
+  top: 0;
+  right: 0;
+  translate: 200px -30px;
+}
+.back-blob,
+.back-blob2,
+.back-blob3 {
+  position: absolute;
+  z-index: -1;
+  width: 500px;
+  height: 500px;
+}
+
+.blobs {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff8ed;
+  z-index: -1;
+}
+.signin {
+  background-color: #fff8ed;
+  height: 95vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.sign-div {
+  height: 350px;
+  margin-top: 20%;
+}
+.sign-div,
+.sign-up-div {
+  background-color: #f5cea5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  padding-top: 2vh;
+  border-radius: 10px;
+  border: solid #b46e13;
+  box-shadow: 0px 10px 17px 5px rgba(0, 0, 0, 0.185);
+}
+.sign-up-div {
+  height: 450px;
+  margin-top: 15%;
+}
+.sign-div hr,
+.sign-up-div hr {
+  width: 80%;
+  height: 3px;
+  border: none;
+  background-color: #b46e13;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+.sign-div h1,
+.sign-up-div h1 {
+  color: #371f01;
+  margin-bottom: 10%;
+}
+.sign-div input,
+.sign-div button,
+.sign-up-div input,
+.sign-up-div button {
+  margin: 1vh;
+  border: none;
+  outline: none;
+  padding: 3px;
+  border-radius: 5px;
+  border: solid #b46e13 2px;
+}
+.sign-div input,
+.sign-up-div input {
+  font-size: large;
+  width: 80%;
+  height: 30px;
+  background-color: #fff8ed;
+}
+.sign-div button,
+.sign-up-div button {
+  margin-top: 20px;
+  width: 30%;
+  height: 35px;
+  background-color: #b46e13;
+  color: #fff8ed;
+  cursor: pointer;
+  transition: .3s;
+}
+.sign-div button:hover,
+.sign-up-div button:hover {
+  background-color: #f5cea5;
+  color: #b46e13;
+}
+.span1 {
+  color: blue;
+  cursor: pointer;
+}
+.loader{
+  width: 20px;
+  animation-name: loader;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  color: white;
+  filter: invert(100%);
+}
+@keyframes loader{
+  from{
+    rotate: 1deg;
+  }
+  to{
+    rotate: 360deg;
+  }
+}
+.dis{
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.my-main{
+  overflow: auto;
+  width: 100%;
+  height: 88vh;
+  background-color: #fff8ed;
+}
+.my-turns{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #f5cea5;
+  padding: 20px;
+  align-items: center;
+
+}
+.my-turns .turn-div{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+}
+.turn-div{
+}
+.turn,.add-turn{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: start;
+  margin: 5px;
+  background-color: #b46e13;
+  width: 150px;
+  height: 200px;
+  border-radius: 5px;
+  padding: 5px;
+  gap: 5px;
+}
+.add-turn{
+  font-size: 40px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.set-turn{
+  background-color: #b46e13;
+  width: 50px;
+  width:fit-content;
+  max-width: fit-content;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.turn-time{
+  background-color: #fff8ed;
+  width: 70px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: solid 2px;
+  margin: 5px;
+}
