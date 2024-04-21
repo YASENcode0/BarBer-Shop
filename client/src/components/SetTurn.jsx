@@ -1,14 +1,17 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Axios from "axios";
 import { UserContext } from "./context/UserContext";
 
-export default function SetTurn() {
+export default function SetTurn({popTurns,setPopTurns}) {
   const [freeTurns, setFreeTurns] = useState([{}]);
-  const { user, setUser } = useContext(UserContext);
+  const { user, setUser , rerender , setRerender } = useContext(UserContext);
 
+useEffect(()=>{
   async function getFreeTurns() {
     await Axios.get("/getfreeturn").then((res) => setFreeTurns(res.data));
   }
+  getFreeTurns()
+},[])
 
   async function addTurnToUser(_id) {
     console.log(_id);
@@ -17,13 +20,17 @@ export default function SetTurn() {
     });
   }
 
+  if(popTurns)
   return (
-    <div onClick={getFreeTurns} className="set-turn">
-      {freeTurns.map((freeTurn) => {
+    <div className="set-turn">
+      {freeTurns?.map((freeTurn) => {
         return (
           <div
+            key={freeTurn?._id}
             onClick={() => {
               addTurnToUser(freeTurn._id);
+              setRerender(rerender + 1);
+              console.log(rerender)
             }}
             className="turn-time"
           >

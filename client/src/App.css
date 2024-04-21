@@ -328,7 +328,7 @@ li {
 }
 .turn-div{
 }
-.turn,.add-turn{
+.turn{
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -342,6 +342,17 @@ li {
   gap: 5px;
 }
 .add-turn{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: start;
+  margin: 5px;
+  background-color: #b46e13;
+  width: 150px;
+  height: 200px;
+  border-radius: 5px;
+  padding: 5px;
+  gap: 5px;
   font-size: 40px;
   display: flex;
   text-align: center;

@@ -178,7 +178,8 @@ app.post("/getuserturns", async (req, res) => {
     const { id } = req.body;
     const turns = await turn.find({ user: id });
 
-    console.log(turns);
+    console.log(turns," : user turns ");
+    console.log(id)
 
     if (turns.length > 0) {
       res.json(turns);

@@ -12,17 +12,19 @@ import My from "./components/My";
 
 function App() {
   const [user, setUser] = useState({});
+  const [rerender,setRerender] = useState(0);
 
   useEffect(() => {
     async function lodae() {
       const data = localStorage.getItem("myAcu");
       setUser(JSON.parse(data));
+      console.log(data)
     }
     lodae();
   }, []);
 
   return (
-    <UserContext.Provider value={{ user, setUser }}>
+    <UserContext.Provider value={{ user, setUser , rerender , setRerender }}>
       <Router>
         <div className="app">
           <Routes>
